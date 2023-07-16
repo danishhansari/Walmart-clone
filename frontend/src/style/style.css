@@ -1,0 +1,10 @@
+.nav ul li{
+    padding: .5em 1em;
+    border-radius: 100px;
+}
+.nav ul li:hover{
+    background-color:#004f9a;
+}
+.footer ul li{
+    text-align: center  ;
+}
