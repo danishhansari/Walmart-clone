@@ -13,3 +13,11 @@
 .footer ul li{
     text-align: center  ;
 }
+/* Rating */
+.rating {
+    color: rgb(236, 236, 75);
+    font-size: 1.1em;
+}
+.rating span:last-child{
+    color: #333;
+}

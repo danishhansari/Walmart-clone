@@ -8,6 +8,7 @@ export default {
             price:60,
             brand:'Lays',
             rating:4.4,
+            numReview:3,
             countInStock:8
         },
         {
@@ -18,6 +19,7 @@ export default {
             price:30,
             brand:'Haldiram',
             rating:4.5,
+            numReview:1,
             countInStock:12
         },
         {
@@ -28,6 +30,7 @@ export default {
             price:10,
             brand:'Lemor',
             rating:4,
+            numReview:1,
             countInStock:10
         },
         {
@@ -38,6 +41,7 @@ export default {
             price:120,
             brand:'Havmor',
             rating:3.2,
+            numReview:5,
             countInStock:4
         },
         {
@@ -48,6 +52,7 @@ export default {
             price:150,
             brand:'Havmor',
             rating:4,
+            numReview:2,
             countInStock:5
         },
         {
@@ -58,6 +63,7 @@ export default {
             price:80,
             brand:'Pastonji',
             rating:4.8,
+            numReview:8,
             countInStock:3
         },
         {
@@ -68,6 +74,7 @@ export default {
             price:200,
             brand:'Amul',
             rating:4.6,
+            numReview:1,
             countInStock:4
         },
         {
@@ -78,6 +85,7 @@ export default {
             price:120,
             brand:'Baskin Robbin',
             rating:4.2,
+            numReview:5,
             countInStock:8
         },
     ]

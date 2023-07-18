@@ -1,4 +1,5 @@
 import axios from 'axios';
+import  Rating  from '../components/Rating';
 
 const Home = {
   render: async () => {
@@ -13,15 +14,16 @@ const Home = {
     }
     const products = await response.data;
     return `
-        <ul class="product-list flex flex-wrap items-start justify-center">
+        <ul class="product-list flex flex-wrap items-center justify-center gap-3">
         ${products.map(
-    (product) => `
+        (product) => `
         <li class="max-w-[120px]">
                 <a href="/#/product/${product.id}">
-                <img src="${product.image}" class="w-[100px] h-[110px] rounded" alt="${product.name}">
+                <img src="${product.image}" class="w-[95px] h-[110px] rounded" alt="${product.name}">
                 </a>
                 <p class="amount">$${product.price} </p>
                 <p class="title">${product.name}</p>
+                <p class="rating">${Rating.render({ value: product.rating, text: `${product.numReview} reviews` })}</p>
                 <p class="brand text-zinc-500">${product.brand}</p>
                 <p class="text-slate-800">Pickup Delivery</p>
             </li>`,
