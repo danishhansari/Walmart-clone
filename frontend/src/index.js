@@ -6,13 +6,13 @@ const routes = {
     '/' :Home,
     '/product/:id':Product,
 }
-const router = () => {
+const router = async () => {
     const request = parseRequestUrl();
     const parseUrl = (request.resource ? `/${request.resource}` : '/') + (request.id? '/:id':'') + 
     (request.verb ? `/${request.verb}` : '');
     const screen = routes[parseUrl] ? routes[parseUrl] : Error404Screen
     const main = document.querySelector('.main')
-    main.innerHTML = screen.render();
+    main.innerHTML = await screen.render();
 };
 window.addEventListener('load', router)
 window.addEventListener('hashchange', router)
