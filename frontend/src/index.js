@@ -13,6 +13,7 @@ const router = async () => {
   const screen = routes[parseUrl] ? routes[parseUrl] : Error404Screen;
   const main = document.querySelector('.main');
   main.innerHTML = await screen.render();
+  // await screen.after_render();
 };
 window.addEventListener('load', router);
 window.addEventListener('hashchange', router);

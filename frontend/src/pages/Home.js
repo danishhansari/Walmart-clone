@@ -23,13 +23,11 @@ const Home = {
                 </a>
                 <p class="amount">$${product.price} </p>
                 <p class="title">${product.name}</p>
-                <p class="rating">${Rating.render({ value: product.rating, text: `${product.numReview} reviews` })}</p>
+                <p class="rating text-2xl">${Rating.render({ value: product.rating, text: `${product.numReview} reviews` })}</p>
                 <p class="brand text-zinc-500">${product.brand}</p>
                 <p class="text-slate-800">Pickup Delivery</p>
             </li>`,
   )
-}
-        `;
-  },
+}`;},
 };
 export default Home;

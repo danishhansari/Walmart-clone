@@ -15,8 +15,7 @@
 }
 /* Rating */
 .rating {
-    color: rgb(236, 236, 75);
-    font-size: 1.1em;
+    color: yellow;
 }
 .rating span:last-child{
     color: #333;
