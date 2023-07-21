@@ -1,14 +1,14 @@
-import  parseRequestUrl  from "../utils";
+import  { parseRequestUrl } from "../utils";
 import { getProduct } from "../api";
 import Rating  from '../components/Rating'
 
 const Product = {
-  //   after_render:  () => {
-  //   const request = parseRequestUrl()
-  //   document.querySelector('#add-btn').addEventListener('click', () => {
-  //     document.location.hash= `/cart/${request.id}`
-  //   })
-  // }
+    after_render:  () => {
+    const request = parseRequestUrl()
+    document.querySelector('#add-btn').addEventListener('click', () => {
+       document.location.hash= `/cart/${request.id}`
+    })
+  },
   render: async () => {
     const request = parseRequestUrl();
     const product = await getProduct(request.id);
