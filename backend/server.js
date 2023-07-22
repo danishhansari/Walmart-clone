@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose'
+import bodyParser from 'body-parser';
 import  data  from './data';
 import config from './config';
 import userRouter from './routers/userRoute'
@@ -17,6 +18,7 @@ mongoose.connect(config.MONGODB_URL, {
 })
 const app = express();
 app.use(cors());
+app.use(bodyParser.json())
 app.use('/api/users', userRouter)
 app.get('/api/products', (req, res) => {
   res.send(data.products);
@@ -32,7 +34,4 @@ app.get('/api/products/:id', (req, res) => {
 
 app.listen(5000, () => {
   console.log('serve at http://localhost:5000');
-});
-app.listen(27017, () => {
-  console.log('i heard you');
 });
